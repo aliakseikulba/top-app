@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {HtagProps} from './Htag.props';
 import s from './Htag.module.css';
 
-export const Htag = ({tag, children}: HtagProps): JSX.Element => {
+
+export const Htag: FC<HtagProps> = ({tag, children}): JSX.Element => {
   switch (tag) {
     case 'h1': {
       return <h1 className={s.h1}>{children}</h1>;
