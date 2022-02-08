@@ -7,16 +7,14 @@ import Footer from './Footer/Footer';
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <Header/>
-      <div>
-        <Sidebar/>
-        <main>
+    <div className={s.wrapper}>
+      <Header className={s.header}/>
+        <Sidebar className={s.sidebar}/>
+        <div className={s.body}>
           {children}
-        </main>
-      </div>
-      <Footer/>
-    </>
+        </div>
+      <Footer className={s.footer}/>
+    </div>
   );
 };
 
